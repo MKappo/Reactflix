@@ -2,19 +2,19 @@
   "categorias": [
     {
       "titulo": "KPO Bass",
-      "cor": "#00C86F",
+      "cor": "#8B0000",
       "link_extra": {
-        "text": "Experimentações de um baixista em 'desenvolvimento' ",
+        "text": "Canal KPO Bass | Experimentações de um baixista em 'desenvolvimento' ",
         "url": "https://www.youtube.com/channel/UCJ1ncoj9GJgD3IZmlbFXHUQ?view_as=subscriber"
       },
       "videos": [
         {
-          "titulo": "Desafio Groove TMBX",
-          "url": "https://www.youtube.com/watch?v=AUPKNAatbHU"
+          "titulo": "Sabe quem eu sou (Bass Cover)",
+          "url": "https://www.youtube.com/watch?v=DTfmD1qoROc"
         },
         {
-          "titulo": "New ID | Sabe quem eu sou (Bass Cover)",
-          "url": "https://www.youtube.com/watch?v=DTfmD1qoROc"
+          "titulo": "Desafio Groove TMBX",
+          "url": "https://www.youtube.com/watch?v=AUPKNAatbHU"
         },
         {
           "titulo": "Sweet Child O' mine (Bass Cover)",
