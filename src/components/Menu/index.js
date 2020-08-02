@@ -11,7 +11,8 @@ function Menu() {
       <a href="/">
         <img className="Logo" src={Logo} alt="Logo da KPOFlix" />
       </a>
-      <Button as='a' className="ButtonLink" href="https://youtu.be/AUPKNAatbHU">
+      <Button as='a' className="ButtonLink" href="/">
+       {/* https://youtu.be/AUPKNAatbHU */}
         Novo Vídeo
       </Button>
     </nav>
