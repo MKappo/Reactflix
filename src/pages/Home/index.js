@@ -17,7 +17,7 @@ function Home() {
 
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        videoDescription={"Experimentações de um baixista em 'desenvolvimento'"}
+        videoDescription={"Experimentações de um baixista em desenvolvimento"}
         url={dadosIniciais.categorias[0].videos[0].url}
       />
 

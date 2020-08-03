@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/Video'
 import PageNotFound from './pages/PageNotFound';
-
+import CadastroCategoria from './pages/cadastro/Categoria'
 
 ReactDOM.render(
 
@@ -15,8 +15,9 @@ ReactDOM.render(
     <Switch>
 
       <Route path="/" component={Home} exact />
-      <Route path="/cadastro/video" component={CadastroVideo} />
-      <Route component={PageNotFound} />
+      <Route path="/cadastro/video" component={CadastroVideo} exact />
+      <Route path="/cadastro/categoria" component={CadastroCategoria} exact />
+      <Route component={PageNotFound} exact />
 
     </Switch>
 
