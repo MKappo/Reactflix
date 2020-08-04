@@ -1,6 +1,7 @@
 import React from 'react';
 import PageDefault from '../../components/PageDefault';
-import FlapBird from '../../components/FlapBird';
+import '../PageNotFound/index.css';
+import Error404 from '../../assets/img/PageNotFound.png';
 
 
 function PageNotFound() {
@@ -9,11 +10,7 @@ function PageNotFound() {
         <PageDefault>
 
 
-            <h1>
-                PAGE NOT FOUND... BUT YOU CAN AT LEAST PLAY SOMETHING :)
-            </h1>
-        
-            <FlapBird/>
+            <img className="square" src={Error404} alt="Error 404" />
 
             
         </PageDefault>

@@ -1,0 +1,26 @@
+
+.square {
+
+    background-color: black;
+    max-height: 100vh;
+    max-width: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+
+}
+
+@media (max-width: 800px) {
+    .square {
+    max-height: 212px;
+    bottom: 200px;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+
+    }
+}

@@ -20,6 +20,7 @@ const Container = styled.ul`
     }
   }
   
+  
   .slick-prev {
     left: 0;
   }
