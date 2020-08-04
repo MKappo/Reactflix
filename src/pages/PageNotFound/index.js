@@ -9,8 +9,13 @@ function PageNotFound() {
 
         <PageDefault>
 
+            <div className="pageWrapper">
+                
+                <img src={Error404} alt="Error 404" />
 
-            <img className="square" src={Error404} alt="Error 404" />
+            </div>
+
+
 
             
         </PageDefault>

@@ -1,26 +1,25 @@
 
-.square {
 
+.pageWrapper{
     background-color: black;
-    max-height: 100vh;
-    max-width: 100vh;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
 
 }
 
 @media (max-width: 800px) {
-    .square {
-    max-height: 212px;
-    bottom: 200px;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto;
-
+    .pageWrapper {
+        height: 600px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border: 0;
+        text-align: center;
+    
     }
 }
