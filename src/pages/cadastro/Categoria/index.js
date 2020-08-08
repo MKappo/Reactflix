@@ -34,7 +34,6 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {values.nome}
       </h1>
 
       <form onSubmit={function handleSubimit(infosDoEvento) {
