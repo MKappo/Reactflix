@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -28,6 +28,36 @@ function CadastroCategoria() {
       infoDoEvento.target.value,
     );
   }
+
+  useEffect(() => {
+    const URL = 'http://localhost:8080/categorias';
+
+    fetch(URL)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+
+    /*    setTimeout(() => {
+      setCategorias([
+        ...categorias,
+        {
+          id: 1,
+          nome: 'Front End',
+          descricao: 'Uma categoria',
+          cor: '#cbd1ff',
+        },
+        {
+          id: 2,
+          nome: 'Back End',
+          descricao: 'Outra categoria',
+          cor: '#cbd1ff',
+        },
+      ]);
+    }, 4 * 1000); */
+  }, []);
 
   return (
 
@@ -75,6 +105,12 @@ function CadastroCategoria() {
         <Button>
           Cadastrar
         </Button>
+
+        {categorias.length === 0 && (
+          <div>
+            Loading...
+          </div>
+        )}
 
       </form>
 
