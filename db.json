@@ -70,42 +70,42 @@
   "videos": [
     {
       "id": 58,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Bass Cover Banda New ID",
       "titulo": "Sabe quem eu sou (Bass Cover)",
       "url": "https://www.youtube.com/watch?v=DTfmD1qoROc"
     },
     {
       "id": 57,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Um baixista em desenvolvimento",
       "titulo": "Desafio Groove TMBX",
       "url": "https://www.youtube.com/watch?v=AUPKNAatbHU"
     },
     {
       "id": 56,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Bass Cover Guns",
       "titulo": "Sweet Child O' mine (Bass Cover)",
       "url": "https://www.youtube.com/watch?v=6DHjmrTUUBQ"
     },
     {
       "id": 62,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Collab com os amigos",
       "titulo": "Michael Jackson - Man in the mirror (cover)",
       "url": "https://www.youtube.com/watch?v=4heeoeAg63A"
     },
     {
       "id": 61,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Collab de responsa",
       "titulo": "Don’t Start Now - Dua Lipa (cover)",
       "url": "https://www.youtube.com/watch?v=fa4pz4YeWZE"
     },
     {
       "id": 60,
-      "categoriaId": 1,
+      "categoriaId": 7,
       "description": "Canal Toque Mais BaiXo",
       "titulo": "Desafio Groove #1 | Raphael Duvalle",
       "url": "https://www.youtube.com/watch?v=BfNJqTCsd-w&t=104s"

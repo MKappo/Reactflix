@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../components/Menu/';
+import Menu from '../../components/Menu';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
@@ -17,7 +17,7 @@ function Home() {
 
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        videoDescription={"Experimentações de um baixista em desenvolvimento"}
+        videoDescription="Experimentações de um baixista em desenvolvimento"
         url={dadosIniciais.categorias[0].videos[0].url}
       />
 
@@ -34,7 +34,6 @@ function Home() {
         category={dadosIniciais.categorias[2]}
       />
 
-
       <Carousel
         category={dadosIniciais.categorias[3]}
       />
@@ -42,7 +41,6 @@ function Home() {
       <Carousel
         category={dadosIniciais.categorias[4]}
       />
-
 
       <Carousel
         category={dadosIniciais.categorias[5]}
