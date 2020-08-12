@@ -3,15 +3,55 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import styled from '../../../../node_modules/styled-components';
 
-function CadastroCategoria() {
-  const valoresIniciais = {
-    nome: '',
-    descricao: '',
-    cor: '#000000',
-  };
+const Table = styled.table`
+  border:4px solid #df1e1e;
+  border-collapse: collapse;
 
-  const [categorias, setCategorias] = useState([]);
+  th {
+    height: 40px;
+    text-align: left; 
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom:4px solid #df1e1e;
+    border-right: 4px solid #df1e1e;
+    padding: 7px;
+  }
+
+  tr {
+    background: #0d0d0d;
+  }
+
+  td {
+    height: 40px;
+    border: 3px solid black;
+    padding: 7px;
+  }
+
+  @media (max-width: 800px) {
+    
+    th {
+    height: 20px;
+    text-align: left; 
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom:2px solid #df1e1e;
+    border-right: 2px solid #df1e1e;
+    padding: 7px;
+    }
+
+    td {
+    height: 20px;
+    border: 1px solid black;
+    padding: 3px;
+    }
+
+
+  }
+`;
+
+function useForm(valoresIniciais) {
   const [values, setValues] = useState(valoresIniciais);
 
   function setValue(chave, valor) {
@@ -28,6 +68,28 @@ function CadastroCategoria() {
       infoDoEvento.target.value,
     );
   }
+
+  function clearForm() {
+    setValues(valoresIniciais);
+  }
+
+  return {
+    values,
+    handleChange,
+    clearForm,
+  };
+}
+
+function CadastroCategoria() {
+  const valoresIniciais = {
+    titulo: '',
+    descricao: '',
+    cor: '#000000',
+  };
+
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
+  const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     const URL = window.location.hostname.includes('localhost')
@@ -76,15 +138,15 @@ function CadastroCategoria() {
           values,
         ]);
 
-        setValues(valoresIniciais);
+        clearForm();
       }}
       >
 
         <FormField
           label="Nome da Categoria"
           type="text"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
 
@@ -105,7 +167,7 @@ function CadastroCategoria() {
         />
 
         <Button>
-          Cadastrar
+          Salvar
         </Button>
 
         {categorias.length === 0 && (
@@ -115,18 +177,51 @@ function CadastroCategoria() {
         )}
 
       </form>
+      <br />
+      <Table>
+        <tbody>
 
-      <ul>
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Editar</th>
+            <th>Remover</th>
+          </tr>
+
+          {categorias.map((categoria) => (
+            <tr key={`${categoria.titulo}`}>
+              <td>
+                {categoria.titulo}
+              </td>
+
+              <td>
+                {categoria.descricao}
+              </td>
+              <td>
+                Editar
+              </td>
+              <td>
+                Remover
+              </td>
+            </tr>
+          ))}
+        </tbody>
+
+      </Table>
+
+      {/*       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
-      </ul>
+      </ul> */}
 
+      <br />
       <Link to="/">
         Ir para Home
       </Link>
+      <br />
 
     </PageDefault>
 
