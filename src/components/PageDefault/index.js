@@ -1,7 +1,8 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 import Menu from '../Menu';
 import Footer from '../Footer';
-import styled from 'styled-components';
 
 const Main = styled.main`
 
@@ -13,25 +14,37 @@ const Main = styled.main`
     padding-right: 5%; 
     display: flex;
     flex-direction: column;
-`
+    ${({ paddingAll }) => css`
+      padding: ${paddingAll};
+    `}
+`;
 
+function PageDefault({ children, paddingAll }) {
+  return (
 
-function PageDefault({ children }) {
-    return (
+    <>
 
-        <>
+      <Menu />
 
-            <Menu />
+      <Main paddingAll={paddingAll}>
+        {children}
+      </Main>
 
-            <Main>
-                {children}
-            </Main>
+      <Footer />
 
-            <Footer />
+    </>
 
-        </>
-
-    );
+  );
 }
+
+PageDefault.defaultProps = {
+  paddingAll: '',
+  children: '',
+};
+
+PageDefault.propTypes = {
+  children: PropTypes.string,
+  paddingAll: PropTypes.string,
+};
 
 export default PageDefault;
