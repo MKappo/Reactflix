@@ -38,13 +38,14 @@ function PageDefault({ children, paddingAll }) {
 }
 
 PageDefault.defaultProps = {
-  paddingAll: '',
+  paddingAll: null,
   children: '',
+
 };
 
 PageDefault.propTypes = {
-  children: PropTypes.string,
-  paddingAll: PropTypes.string,
+  children: PropTypes.node,
+  paddingAll: PropTypes.number,
 };
 
 export default PageDefault;

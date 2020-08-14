@@ -69,7 +69,7 @@ function CadastroCategoria() {
       >
 
         <FormField
-          label="Nome da Categoria"
+          label="Titulo da Categoria"
           type="text"
           name="titulo"
           value={values.titulo}
