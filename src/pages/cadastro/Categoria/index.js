@@ -5,6 +5,7 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import Table from '../../../components/Table';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -63,6 +64,15 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
+
+        categoriasRepository.createCategory({
+          titulo: values.titulo,
+          descricao: values.descricao,
+          cor: values.cor,
+        })
+          .then(() => {
+            // console.log('Cadastrou com Sucesso');
+          });
 
         clearForm();
       }}

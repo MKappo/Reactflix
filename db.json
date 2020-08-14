@@ -65,6 +65,12 @@
         "text": "Cursos de Data Science na Alura",
         "url": "https://www.alura.com.br/cursos-online-mobile"
       }
+    },
+    {
+      "titulo": "Aviação",
+      "descricao": "Videos de Aviação",
+      "cor": "#06603d",
+      "id": 8
     }
   ],
   "videos": [
@@ -304,6 +310,12 @@
       "titulo": "dfsdfdfd",
       "url": "https://www.youtube.com/watch?v=m7glsG-dGZo",
       "id": 64
+    },
+    {
+      "categoriaId": 8,
+      "titulo": "Voo 666",
+      "url": "https://www.youtube.com/watch?v=kyAnLZICTJY",
+      "id": 65
     }
   ]
 }
