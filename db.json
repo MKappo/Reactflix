@@ -55,22 +55,6 @@
         "text": "Cursos de Back End na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
       }
-    },
-    {
-      "id": 3,
-      "titulo": "Data Science e Inteligência Artificial",
-      "descricao": "Coleção sobre Data Science",
-      "cor": "#9cd33b",
-      "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/cursos-online-mobile"
-      }
-    },
-    {
-      "titulo": "Aviação",
-      "descricao": "Videos de Aviação",
-      "cor": "#06603d",
-      "id": 8
     }
   ],
   "videos": [
@@ -204,30 +188,6 @@
       "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
     },
     {
-      "id": 13,
-      "categoriaId": 3,
-      "titulo": "Teste de Turing",
-      "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
-    },
-    {
-      "id": 14,
-      "categoriaId": 3,
-      "titulo": "O que é Data Science?",
-      "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
-    },
-    {
-      "id": 15,
-      "categoriaId": 3,
-      "titulo": "Melhor forma de aprender Python",
-      "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
-    },
-    {
-      "id": 16,
-      "categoriaId": 3,
-      "titulo": "Como ingressar no mercado de Data Science?",
-      "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
-    },
-    {
       "id": 17,
       "categoriaId": 4,
       "titulo": "Interestellar",
@@ -298,24 +258,6 @@
       "url": "https://www.youtube.com/watch?v=5t2gq3xJZ9o",
       "categoriaId": 6,
       "id": 55
-    },
-    {
-      "categoriaId": 1,
-      "titulo": "How Deap is Your Love ",
-      "url": "https://www.youtube.com/watch?v=m7glsG-dGZo",
-      "id": 63
-    },
-    {
-      "categoriaId": 1,
-      "titulo": "dfsdfdfd",
-      "url": "https://www.youtube.com/watch?v=m7glsG-dGZo",
-      "id": 64
-    },
-    {
-      "categoriaId": 8,
-      "titulo": "Voo 666",
-      "url": "https://www.youtube.com/watch?v=kyAnLZICTJY",
-      "id": 65
     }
   ]
 }

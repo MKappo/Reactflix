@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import swal from 'sweetalert';
 import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
+
+const styles = { margin: '0 15px' };
 
 function CadastroVideo() {
   const history = useHistory();
@@ -48,8 +51,19 @@ function CadastroVideo() {
           url: values.url,
         })
           .then(() => {
-            // console.log('Cadastrou com Sucesso');
-            history.push('/');
+            if (swal.getState().isOpen === false) {
+              swal({
+                title: 'Video Adicionado!',
+                timer: 20000,
+                customClass: 'swal-modal swal-button swal-overlay',
+                dangerMode: true,
+                button: {
+                  text: 'Fechar',
+                },
+              }).then(() => {
+                history.push('/');
+              });
+            }
           });
       }}
       >
@@ -79,13 +93,11 @@ function CadastroVideo() {
           Salvar
         </Button>
 
+        <Button style={styles} as={Link} to="/cadastro/categoria">
+          Nova Categoria
+        </Button>
       </form>
 
-      <br />
-      <Link to="/cadastro/categoria">
-        Cadastro de Categoria
-      </Link>
-      <br />
     </PageDefault>
 
   );

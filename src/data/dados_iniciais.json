@@ -108,8 +108,10 @@
       ]
     },
     {
+      "id": 3,
       "titulo": "Data Science e Inteligência Artificial",
       "cor": "#df1e1e",
+      "descricao": "Videos sobre Back End",
       "link_extra": {
         "text": "Cursos de Data Science na Alura",
         "url": "https://www.alura.com.br/formacao-data-science"

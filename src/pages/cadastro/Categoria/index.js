@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-expressions */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import Button, { Options } from '../../../components/Button';
 import Table from '../../../components/Table';
 import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
@@ -71,7 +73,19 @@ function CadastroCategoria() {
           cor: values.cor,
         })
           .then(() => {
-            // console.log('Cadastrou com Sucesso');
+            if (swal.getState().isOpen === false) {
+              swal({
+                title: 'Categoria Adicionada !',
+                timer: 20000,
+                customClass: 'swal-modal swal-button swal-overlay',
+                dangerMode: true,
+                button: {
+                  text: 'Fechar',
+                },
+              }).then(() => {
+                window.location.reload();
+              });
+            }
           });
 
         clearForm();
@@ -114,6 +128,7 @@ function CadastroCategoria() {
 
       </form>
       <br />
+
       <Table>
         <tbody>
 
@@ -133,16 +148,36 @@ function CadastroCategoria() {
               <td>
                 {categoria.descricao}
               </td>
-              <td>
-                Editar
+              <td align="center">
+                <Options>Editar</Options>
               </td>
-              <td>
-                Remover
+              <td align="center">
+                <Options
+                  type="button"
+                  id={categoria.id}
+                  onClick={(event) => categoriasRepository.deleteCategory(event)
+                    .then(() => {
+                      if (swal.getState().isOpen === false) {
+                        swal({
+                          title: 'Categoria Removida',
+                          timer: 20000,
+                          customClass: 'swal-modal swal-button swal-overlay',
+                          dangerMode: true,
+                          button: {
+                            text: 'Fechar',
+                          },
+                        }).then(() => {
+                          window.location.reload();
+                        });
+                      }
+                    })}
+                >
+                  Remover
+                </Options>
               </td>
             </tr>
           ))}
         </tbody>
-
       </Table>
 
       {/*       <ul>

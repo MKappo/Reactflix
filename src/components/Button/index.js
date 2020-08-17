@@ -22,4 +22,23 @@ const Button = styled.button`
     }
 `;
 
+export const Options = styled.button`
+    font-style: normal;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    color: var(--white);
+    background: #0d0d0d;
+
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+`;
+
 export default Button;
