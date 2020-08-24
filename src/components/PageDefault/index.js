@@ -29,7 +29,7 @@ function PageDefault({ children, paddingAll }) {
       <Main paddingAll={paddingAll}>
         {children}
       </Main>
-
+    
       <Footer />
 
     </>

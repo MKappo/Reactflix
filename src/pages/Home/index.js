@@ -32,7 +32,7 @@ function Home() {
               <BannerMain
                 videoTitle={dadosIniciais[0].videos[0].titulo}
                 url={dadosIniciais[0].videos[0].url}
-                videoDescription="Experimentações de um baixista em desenvolvimento"
+                videoDescription="Experimentações de um baixista em 'desenvolvimento'"
               />
 
               <Carousel
